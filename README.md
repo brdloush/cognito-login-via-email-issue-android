@@ -1,5 +1,5 @@
-Very simple android app to showcase issue with refreshing of tokens with android cognito SDK,
-when user signs in using email+password combination.
+Very simple android app to showcase [the android cognito SDK issue](https://github.com/aws/aws-sdk-android/issues/259) with refreshing of tokens
+occuring when user was signed in using email+password combination.
 
 Note: The app itself doesn't show much on the screen. For exceptions etc, observe logs via Console / Android Monitor / adb logcat.
 
@@ -15,7 +15,7 @@ Note: The app itself doesn't show much on the screen. For exceptions etc, observ
 
 5) click `simulate timeouting refreshtreshold`. This will result in `cachedTokens.isValidForThreshold()`
    being evaluated as false in `CognitoUser` and therefore refresh of the token will be attempted. It will
-   fail (more information in SDK issue).
+   fail (more information in [the github issue](https://github.com/aws/aws-sdk-android/issues/259)).
 
 6) (you might want to revert the refreshThreshold back to its original value by clicking "reset default refreshThreshold" button before doing any other tests)
 
