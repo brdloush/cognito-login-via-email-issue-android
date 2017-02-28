@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="loginviaemail.cognito.aws.issue.brdloush.net.cognitologinviaemailissueapp.MainActivity"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:text="Login using email (username otherwise)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/useEmailForLogin"
+        android:checked="true"/>
+
+
+    <CheckBox
+        android:text="App knows credentials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/knowsPasswd"
+        android:checked="true"/>
+
+    <Button
+        android:text="Clear Shared Properties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="clearSharedProps"/>
+
+    <Button
+        android:text="Simulate timeouting refreshThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSetTimeout"
+        android:onClick="setTimeoutingRefreshThreshold" />
+
+    <Button
+        android:text="Reset default refreshThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSetTimeout5mins"
+        android:onClick="setDefaultRefreshThreshold" />
+
+    <Button
+        android:text="try login / api call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="tryLogin" />
+
+    <TextView
+        android:text="access token md5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:lines="10"
+        android:id="@+id/accessToken" />
+
+    <TextView
+        android:text="refresh_token md5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:lines="10"
+        android:id="@+id/refreshToken" />
+
+</LinearLayout>
